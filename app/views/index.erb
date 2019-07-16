@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>ALL THE ARTICLES</h1>
+    <h3>if there are any</h3>
+    <ul>
+        <% @articles.each do |article| %>
+            <li><a href=<%="/articles/#{article.id}"%>><%= article.title %></a></li>
+        <% end %>
+    </ul>
+  </body>
+</html>
