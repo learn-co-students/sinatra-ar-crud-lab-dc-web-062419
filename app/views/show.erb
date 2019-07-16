@@ -8,6 +8,12 @@
     <body>
         <h1><%= @article.title %></h1>
         <div><%= @article.content %></div>
+
+
+        <form method="POST" action="/articles/<%= @article.id %>">
+            <input id="hidden" type="hidden" name="_method" value="DELETE">
+            <input type='submit' value= 'delete'>
+        </form>
     </body>
 
 </html>
