@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Articles!</title>
+    </head>
+
+    <body>
+        <h1>A beautiful index of all the articles, ever.</h1>
+
+        <ul>
+            <% @articles.each do |art| %>
+                <li><a href=<%="/article/#{art.id}"%>> <%= art.title %></a></li>
+            <% end %>
+        </ul>
+
+                
+
+
+    </body>
+</html>
