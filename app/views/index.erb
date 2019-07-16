@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+    <head>
+        <title>Index for all articles</title>
+    </head>
+    <body>
+        <ul>
+            <% @articles.each do |article| %>
+                <li><a href=<%="/articles/#{article.id}"%>><%= article.title%></a></li>
+            <% end %>
+        </ul>
+    </body>
+</html>
