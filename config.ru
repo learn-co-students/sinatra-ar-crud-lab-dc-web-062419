@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require './config/environment'
 
@@ -7,7 +8,7 @@ begin
   use Rack::MethodOverride
 
   run ApplicationController
-rescue ActiveRecord::PendingMigrationError => err
-  STDERR.puts err
+rescue ActiveRecord::PendingMigrationError => e
+  warn e
   exit 1
 end
